@@ -57,7 +57,8 @@
 	<release date="2024-01-04" version="v1.0.0">
 	  <description>
 
-    <h2>New Features:</h2>
+    New Features:
+    
     <ul>
         <li>Multiple templates for invoice</li>
         <li>Descriptions for articles</li>
