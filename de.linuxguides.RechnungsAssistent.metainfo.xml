@@ -54,6 +54,24 @@
 	</screenshot>
   </screenshots>
   <releases>
+	<release date="2024-01-04" version="v1.0.0">
+	  <description>
+
+    New Features:
+    
+    <ul>
+        <li>Multiple templates for invoice</li>
+        <li>Descriptions for articles</li>
+        <li>Company Field in Sender Adress</li>
+        <li>Better behavior after creating an invoice</li>
+        <li>Also some well known bugs such the preview button where fixed.</li>
+    </ul>
+
+		<p>
+            With this update your template (which you are using until now) will not be importet. You can however find it in .config/rechungs-assistent/ and manually copy each field to the standard.csv in Dokumente/Rechnungen/data/templates
+		</p>
+	  </description>
+	</release>
 	<release date="2023-09-06" version="v0.2.0">
 	  <description>
 		<p>
