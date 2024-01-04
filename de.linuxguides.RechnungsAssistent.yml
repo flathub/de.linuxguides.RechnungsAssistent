@@ -5,6 +5,7 @@ sdk: org.freedesktop.Sdk
 
 command: rechnungs-assistent.sh
 finish-args:
+  - "--socket=fallback-x11"
   - "--device=dri"
   - "--share=ipc"
   - "--filesystem=home"
