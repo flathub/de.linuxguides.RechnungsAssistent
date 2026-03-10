@@ -1,33 +1,34 @@
 app-id: de.linuxguides.RechnungsAssistent 
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 
 command: rechnungs-assistent.sh
 finish-args:
-  - "--socket=fallback-x11"
-  - "--device=dri"
-  - "--share=ipc"
-  - "--filesystem=home"
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --share=ipc
+  - --filesystem=home
 
 modules:
   - name: rechnungs-assistent
     buildsystem: simple
     build-commands:
-      - install -D de.linuxguides.RechnungsAssistent.metainfo.xml /app/share/metainfo/de.linuxguides.RechnungsAssistent.metainfo.xml
-      - install -D de.linuxguides.RechnungsAssistent.desktop /app/share/applications/de.linuxguides.RechnungsAssistent.desktop
+      - install -D ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/
+      - install -D ${FLATPAK_ID}.desktop -t /app/share/applications/
       - install -D generator-html.py /app/bin/generator-html.py
       - install -D invoice /app/bin/invoice
       - install -D rechnungs-assistent.sh /app/bin/rechnungs-assistent.sh
-      - install -D rechnungs-assistent.png /app/share/icons/hicolor/256x256/apps/de.linuxguides.RechnungsAssistent.png
+      - install -D rechnungs-assistent.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
       - cp -r data /app/bin/data
       - cp -r html /app/bin/html
       - cp -r lib /app/bin/lib
       - cp -r chromium /app/bin/chromium
     sources:
       - type: archive
-        url: https://github.com/Jean28518/invoice-creator-german/releases/download/v1.0.0/rechnungs-assistent-bundle-1.0.0.zip
-        sha256: 1797acbbf32b4335b1a07df34bb29cea3a44f84c31a23d01e31e1df92a3542db
+        url: https://github.com/Jean28518/invoice-creator-german/releases/download/v1.4.0/rechnungs-assistent-bundle-1.4.0.zip
+        sha256: fe4f3e1d3a1e9bdb1cc899c49e0f214f50c0993bd4b621b563867d211233c2fb
       - type: file
         path: de.linuxguides.RechnungsAssistent.metainfo.xml
       - type: file
