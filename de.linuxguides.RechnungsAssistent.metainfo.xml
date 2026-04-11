@@ -1,70 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>de.linuxguides.RechnungsAssistent</id>
-
   <name>Rechnungs-Assistent</name>
   <summary>German invoice generator</summary>
-
   <metadata_license>MIT</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
   <recommends>
-	<control>pointing</control>
-	<control>keyboard</control>
+    <control>pointing</control>
+    <control>keyboard</control>
   </recommends>
 
-  <categories>
-	<category>Productivity</category>
-  </categories>
-
   <description>
-	<p>
-	  The fast and efficient invoice generator for craftsmen, self-employed and SMEs.
-	</p>
-
-    <p>
-        To create invoices more quickly, customers and articles can be conveniently saved for the future. 
-        Existing customer or article tables can be easily imported: 
-        Because both databases are saved in .csv format and can be edited with any spreadsheet editors like Libre Office Calc.
-    </p>
-
-    <p>
-        An invoice can be generated within a few seconds. 
-        Once all your own data has been filled in, 
-        Once all your data has been filled in, you can generate attractive invoices with automatic generation of the invoice number in no time at all.
-    </p>
+    <p>The fast and efficient invoice generator for craftsmen, self-employed and SMEs.</p>
+    <p>To create invoices more quickly, customers and articles can be conveniently saved for the future.
+        Existing customer or article tables can be easily imported: Because both databases are
+        saved in .csv format and can be edited with any spreadsheet editors like Libre Office Calc.</p>
+    <p>An invoice can be generated within a few seconds. Once all your own data has been
+      filled in, Once all your data has been filled in, you can generate attractive
+      invoices with automatic generation of the invoice number in no time at all.</p>
   </description>
 
   <launchable type="desktop-id">de.linuxguides.RechnungsAssistent.desktop</launchable>
 
   <content_rating type="oars-1.0" />
-  <url type="homepage">
-	https://www.linuxguides.de/rechnungs-assistent/
-  </url>
-  <url type="bugtracker">
-	https://github.com/Jean28518/invoice-creator-german
-  </url>
+  <url type="homepage">https://www.linuxguides.de/rechnungs-assistent/</url>
+  <url type="bugtracker">https://github.com/Jean28518/invoice-creator-german/issues</url>
+  <url type="vcs-browser">https://github.com/Jean28518/invoice-creator-german</url>
+  <developer id="de.jf-vogelbacher">
+    <name>Jean-Frédéric Vogelbacher</name>
+  </developer>
 
   <screenshots>
-	<screenshot type="default">
-	  <image> https://raw.githubusercontent.com/Jean28518/invoice-creator-german/main/invoices.png </image>
-	</screenshot>
-	<screenshot type="default">
-	  <image> https://www.linuxguides.de/wp-content/uploads/2023/09/rechnungs-assistent_erstellung.png </image>
-	</screenshot>
+    <screenshot type="default">
+      <image> https://raw.githubusercontent.com/Jean28518/invoice-creator-german/main/invoices.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <image> https://www.linuxguides.de/wp-content/uploads/2023/09/rechnungs-assistent_erstellung.png</image>
+    </screenshot>
   </screenshots>
   <releases>
-	<release date="2023-09-06" version="v0.2.0">
-	  <description>
-		<p>
-            New invoice generator (we now use chromium and html instead of latex).
-            This is more adjustable and results in smaller download sizes.
-		</p>
-
-		<p>
-            Also VAT (Umsatzsteuer) are now supported.
-		</p>
-	  </description>
-	</release>
+    <release date="2025-11-25" version="v1.4.2"/>
+    <release date="2024-01-04" version="v1.0.0">
+      <description>
+        <p>New Features:</p>
+        <ul>
+            <li>Multiple templates for invoice</li>
+            <li>Descriptions for articles</li>
+            <li>Company Field in Sender Adress</li>
+            <li>Better behavior after creating an invoice</li>
+            <li>Also some well known bugs such the preview button where fixed.</li>
+        </ul>
+        <p>With this update your template (which you are using until now) will not be importet.
+          You can however find it in .config/rechungs-assistent/ and manually copy each
+          field to the standard.csv in Dokumente/Rechnungen/data/templates</p>
+      </description>
+    </release>
+    <release date="2023-09-06" version="v0.2.0">
+      <description>
+        <p>New invoice generator (we now use chromium and html instead of latex).
+          This is more adjustable and results in smaller download sizes.</p>
+        <p>Also VAT (Umsatzsteuer) are now supported.</p>
+      </description>
+    </release>
   </releases>
 </component>
